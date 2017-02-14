@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.tobiasbielefeld.solitaire">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:name="de.tobiasbielefeld.solitaire.MainApplication"
+        android:fullBackupContent="@xml/my_backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:largeHeap="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppThemeNoActionBar">
+
+        <activity
+            android:name=".ui.HighScores"
+            android:label="@string/title_activity_statistics"
+            android:theme="@style/AppThemeActionBar" />
+
+        <activity
+            android:name=".ui.settings.Settings"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppThemeActionBar" />
+
+        <activity android:name=".ui.InterestialLogout"/>
+
+        <activity android:name=".ui.about.AboutActivity"/>
+        <activity
+            android:name=".ui.GameSelector"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.GameManager" />
+        <activity
+            android:name=".ui.manual.Manual"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/game_manual"
+            android:theme="@style/AppThemeNoActionBar" />
+    </application>
+
+</manifest>

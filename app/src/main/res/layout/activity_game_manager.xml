@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#33A127"
+    android:layout_height="match_parent"
+    tools:context=".ui.GameManager">
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4914903732265878/4000303746"/>
+
+    <RelativeLayout
+        android:id="@+id/mainRelativeLayoutGame"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/adView2"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/mainTextViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/mainTextViewScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/buttonMainAutoComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mainTextViewTime"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button"
+            android:onClick="menuClick"
+            android:text="@string/game_auto_complete_text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewRedeals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/circle"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@android:color/background_dark"
+            android:visibility="gone" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shadow" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/shadow_bottom_to_top" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#000000"></FrameLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#4CAF50"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/mainButtonScores"
+            android:onClick="menuClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/menu_scores"
+                app:srcCompat="@drawable/scores_material"
+                android:layout_height="30dp"
+                android:id="@+id/button_scores"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/menu_scores" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/mainButtonHint"
+            android:onClick="menuClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/menu_hint"
+                app:srcCompat="@drawable/hint_material"
+                android:layout_height="30dp"
+                android:id="@+id/button_hint"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:text="@string/menu_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/mainButtonRestart"
+            android:onClick="menuClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/menu_main_menu"
+                app:srcCompat="@drawable/menu_material"
+                android:layout_height="30dp"
+                android:id="@+id/button_restart"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/menu_main_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/mainButtonUndo"
+            android:onClick="menuClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/menu_undo"
+                app:srcCompat="@drawable/undo_material"
+                android:layout_height="30dp"
+                android:adjustViewBounds="false"
+                android:id="@+id/button_undo"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:maxLines="1"
+                android:text="@string/menu_undo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/mainButtonSettings"
+            android:onClick="menuClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/menu_settings"
+                app:srcCompat="@drawable/settings_material"
+                android:layout_height="30dp"
+                android:id="@+id/button_settings"/>
+
+            <TextView
+                style="@android:style/TextAppearance.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:maxLines="1"
+                android:text="@string/menu_settings" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewGameChooser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    tools:context="de.tobiasbielefeld.solitaire.ui.GameSelector">
+
+
+    <TableLayout
+        android:id="@+id/tableLayoutGameChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/layout_klondike"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_klondike"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartKlondike"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_klondike" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_freecell"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_freecell"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartFreecell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_freecell" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_yukon"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_yukon"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartYukon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_yukon" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_spider"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_spider"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartSpider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_spider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_simplesimon"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_simplesimon"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartSimpleSimon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_simple_simon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_golf"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_golf"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartGolf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:longClickable="true"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_golf" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_pyramid"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_pyramid"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartPyramid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_pyramid" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_tripeaks"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_tripeaks"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartTriPeaks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_tripeaks" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_fortyeight"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_fortyeight"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartFortyEight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/menu_fortyeight" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_mod3"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_mod3"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartMod3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_mod3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_gypsy"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_gypsy"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartGypsy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/menu_gypsy" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_acesup"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_acesup"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartAcesUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_acesup" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_canfield"
+                android:layout_width="0dp"
+                android:background="@drawable/rounded_bottomm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/games_canfield"
+                    android:textSize="15sp"
+                    android:textStyle="normal|bold"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/buttonStartCanfield"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:drawable/btn_default_small"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/menu_canfield" />
+            </LinearLayout>
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</ScrollView>
